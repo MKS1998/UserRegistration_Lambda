@@ -7,14 +7,14 @@ public class UserValidationTest {
 	@Test
 	public void firstName_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.firstName("Manish");
+		boolean actualResult = validation.firstName("Mahesh");
 		Assert.assertTrue(actualResult);
 	}
 
 	@Test
 	public void lastName_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.lastName("Kumar");
+		boolean actualResult = validation.lastName("Syden");
 		Assert.assertTrue(actualResult);
 	}
 
@@ -28,14 +28,14 @@ public class UserValidationTest {
 	@Test
 	public void phoneNumber_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.phoneNumber("+918002695700");
+		boolean actualResult = validation.phoneNumber("+917498656662");
 		Assert.assertTrue(actualResult);
 	}
 
 	@Test
 	public void password_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.password("qw1rt@Ms");
+		boolean actualResult = validation.password("mks2i@Ms");
 		Assert.assertTrue(actualResult);
 	}
 }
