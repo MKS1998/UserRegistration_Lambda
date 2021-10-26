@@ -21,7 +21,7 @@ public class UserValidationTest {
 	@Test
 	public void email_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.email("mkaubr007@gmail.com");
+		boolean actualResult = validation.email("mksyd007@gmail.com");
 		Assert.assertTrue(actualResult);
 	}
 
