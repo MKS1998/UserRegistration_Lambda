@@ -5,37 +5,57 @@ import org.junit.Test;
 
 public class UserValidationTest {
 	@Test
-	public void firstName_Validation() {
+	public void givenFirstName_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.firstName("Mahesh");
-		Assert.assertTrue(actualResult);
+		boolean actualResult = true;
+		try {
+			actualResult = validation.firstNameValidation("Mahesh");
+		} catch (UserValidationException exception) {
+			Assert.assertEquals(actualResult, exception.message);
+		}
 	}
 
 	@Test
-	public void lastName_Validation() {
+	public void giveLastName_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.lastName("Syden");
-		Assert.assertTrue(actualResult);
+		boolean actualResult = true;
+		try {
+			actualResult = validation.lastNameValidation("Syd");
+		} catch (UserValidationException exception) {
+			Assert.assertEquals(actualResult, exception.message);
+		}
 	}
 
 	@Test
-	public void email_Validation() {
+	public void givenEmail_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.email("mksyd007@gmail.com");
-		Assert.assertTrue(actualResult);
+		boolean actualResult = true;
+		try {
+			actualResult = validation.emailValidation("mksyd07@gmail.com");
+		} catch (UserValidationException exception) {
+			Assert.assertEquals(actualResult, exception);
+		}
 	}
 
 	@Test
-	public void phoneNumber_Validation() {
+	public void givenPhoneNumber_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.phoneNumber("+917498656662");
-		Assert.assertTrue(actualResult);
+		boolean actualResult = true;
+		try {
+			actualResult = UserValidation.phoneNumber("+917498656662");
+		} catch (UserValidationException exception) {
+			Assert.assertEquals(actualResult, exception.message);
+		}
 	}
 
 	@Test
-	public void password_Validation() {
+	public void givenPassword_Validation() {
 		UserValidation validation = new UserValidation();
-		boolean actualResult = validation.password("mks2i@Ms");
-		Assert.assertTrue(actualResult);
+		boolean actualResult = true;
+		try {
+			actualResult = validation.passwordValidation("qw1rt@Ms");
+		} catch (UserValidationException exception) {
+			Assert.assertEquals(actualResult, exception.message);
+		}
 	}
 }
